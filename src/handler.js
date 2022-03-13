@@ -83,7 +83,6 @@ const showAllBooks = (request, h) => {
   }
 
   if (reading !== undefined) {
-    console.log(`${reading} ${parseInt(reading, 10) === 0} \n`);
     if (parseInt(reading, 10) === 0) {
       const readingBooks = books.filter((read) => read.reading === false)
         .map((value) => ({ id: value.id, name: value.name, publisher: value.publisher }));
